@@ -1,0 +1,14 @@
+main\java\modelo\Carrito.class
+main\java\modelo\Combo.class
+main\java\modelo\ArticuloMenu.class
+main\java\modelo\ItemCarrito.class
+main\java\Controlador\CatalogoController.class
+main\java\Servicio\CatalogoService.class
+main\java\Servicio\PedidoService.class
+main\java\modelo\Pedido.class
+main\java\modelo\DetallePedido.class
+main\java\Controlador\PedidoController.class
+main\java\modelo\EstadoPedido.class
+main\java\HamburgueseriaApplication.class
+main\java\dto\ItemPedidoRequest.class
+main\java\modelo\Producto.class
