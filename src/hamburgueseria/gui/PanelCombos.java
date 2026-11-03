@@ -67,12 +67,15 @@ public class PanelCombos extends JPanel implements Refrescable {
         btnAgregarItem.addActionListener(e -> agregarItem());
         btnQuitarItem.addActionListener(e -> quitarItem());
 
-        JPanel selector = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        cmbProducto.setPreferredSize(new Dimension(200, 26));
-        selector.add(cmbProducto);
-        selector.add(new JLabel("Cant.:"));
-        selector.add(spnCantidad);
-        selector.add(btnAgregarItem);
+        // El desplegable ocupa el espacio que sobra; cantidad y botón quedan siempre visibles.
+        JPanel cantidadYBoton = new JPanel(new FlowLayout(FlowLayout.LEFT, 4, 0));
+        cantidadYBoton.add(new JLabel("Cant.:"));
+        cantidadYBoton.add(spnCantidad);
+        cantidadYBoton.add(btnAgregarItem);
+
+        JPanel selector = new JPanel(new BorderLayout(4, 0));
+        selector.add(cmbProducto, BorderLayout.CENTER);
+        selector.add(cantidadYBoton, BorderLayout.EAST);
 
         JScrollPane scrollItems = new JScrollPane(tablaItems);
         scrollItems.setPreferredSize(new Dimension(300, 90));

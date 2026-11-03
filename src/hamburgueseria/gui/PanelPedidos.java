@@ -11,7 +11,6 @@ import hamburgueseria.servicio.ClienteService;
 import hamburgueseria.servicio.PedidoService;
 
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -102,9 +101,10 @@ public class PanelPedidos extends JPanel implements Refrescable {
         JButton btnAgregar = new JButton("Agregar al pedido");
         btnAgregar.addActionListener(e -> agregarAlCarrito());
 
+        // Dos filas para que nada quede cortado si la ventana es angosta.
         JPanel filaCliente = new JPanel(new FlowLayout(FlowLayout.LEFT));
         filaCliente.add(new JLabel("Cliente:"));
-        cmbCliente.setPreferredSize(new Dimension(260, 26));
+        cmbCliente.setPreferredSize(new Dimension(300, 26));
         filaCliente.add(cmbCliente);
 
         JPanel filaArticulo = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -115,8 +115,7 @@ public class PanelPedidos extends JPanel implements Refrescable {
         filaArticulo.add(spnCantidad);
         filaArticulo.add(btnAgregar);
 
-        JPanel seleccion = new JPanel();
-        seleccion.setLayout(new BoxLayout(seleccion, BoxLayout.Y_AXIS));
+        JPanel seleccion = new JPanel(new java.awt.GridLayout(2, 1));
         seleccion.add(filaCliente);
         seleccion.add(filaArticulo);
 

@@ -59,7 +59,10 @@ En XAMPP el usuario es `root` y **no tiene contraseña**, y así viene ya config
 Si tu base tiene otra contraseña, abrir `src/hamburgueseria/datos/Conexion.java` y cambiar `USUARIO` y `CLAVE`.
 
 ### 5. Ejecutar
-Ejecutar la clase `Main` (`src/hamburgueseria/Main.java`) con el botón *Run* del programa.
+**La forma más fácil (Windows):** hacer doble clic en **`ejecutar.bat`**. Compila y abre la aplicación.
+
+**Desde VS Code:** abrir la carpeta `hamburgueseria` (la que tiene `src` y `lib`), esperar a que cargue
+la extensión de Java y ejecutar `Main` (`src/hamburgueseria/Main.java`) con el botón *Run*.
 
 ### Sin programa (por consola)
 Parado en la carpeta del proyecto, con el `.jar` ya copiado en `lib/`:

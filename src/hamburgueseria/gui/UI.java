@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 final class UI {
 
     private static final NumberFormat MONEDA =
-            NumberFormat.getCurrencyInstance(new Locale("es", "AR"));
+            NumberFormat.getCurrencyInstance(Locale.forLanguageTag("es-AR"));
     private static final DateTimeFormatter FECHA_HORA =
             DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
@@ -126,7 +126,6 @@ final class UI {
             }
 
             private void aplicar() {
-                @SuppressWarnings("unchecked")
                 TableRowSorter<?> sorter = (TableRowSorter<?>) tabla.getRowSorter();
                 String texto = buscador.getText().trim();
                 if (texto.isEmpty()) {

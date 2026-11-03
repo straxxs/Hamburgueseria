@@ -1,0 +1,8 @@
+Poné en esta carpeta el archivo del driver de MariaDB:
+
+    mariadb-java-client-3.x.x.jar
+
+Descarga: https://central.sonatype.com/a    rtifact/org.mariadb.jdbc/mariadb-java-client/overview
+(entrá a la página y descargá el archivo .jar desde el botón/menú "Download")
+
+Después agregalo como librería del proyecto en tu programa (ver README.md).
